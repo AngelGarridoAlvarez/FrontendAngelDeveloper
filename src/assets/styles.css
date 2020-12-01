@@ -1,0 +1,537 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/*Cargamos nuestra fuentes tipográficas*/
+
+@font-face {
+  font-family: "yanone";
+  src: url("fonts/yanone.ttf");
+}
+
+@font-face {
+  font-family: "finger";
+  src: url("fonts/finger.ttf");
+}
+
+@font-face {
+  font-family: "titilium";
+  src: url("fonts/titilium.ttf");
+}
+@font-face {
+  font-family: "steronite";
+  src: url("fonts/Steronite.ttf");
+}
+
+.Steronite {
+  font-family: Steronite;
+  color: #737373;
+}
+
+/*Estilos Generales:*/
+
+/* Estilos que se aplican a todos los elementos de la web:*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+body {
+  font-family: "titilium", Arial, Helvetica;
+  font-size: 20px;
+  background: url("img/pattern.png");
+  background-attachment: fixed;/*Para que el fondo se quede fijo*/
+}
+
+.clearfix{ /*Para limpiar lo flotado entre los diferentes elementos*/
+  float: none;
+  clear: both;
+}
+
+/*Barra de navegación - header*/
+
+header{
+  font-size: 10px;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  position: fixed;/*cuando hago scroll la barra de navegación se queda siempre arriba*/
+  text-transform: uppercase;/*para que todo el texto sea en mayúscula*/
+  background: url("img/pattern.png");
+;
+}
+
+#headerDiv1{
+  width: 100%;
+  height: 85px;
+  overflow: hidden;
+}
+
+#headerDiv2{
+  height: 200px;
+  background-color: rgba(74, 74, 74, 0.3);
+  width: 80%;
+  margin: 0px auto;
+  border-left: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+  box-shadow: 0px 0px 40px black;
+}
+
+header ul{
+  display: block;
+  width: 100%;
+  height: inherit; /*heredado del padre*/
+  text-align: center;
+  /*para que no se salga por abajo mi margen negro cuando hace hover*/
+  margin: -13px auto 0px;
+}
+
+header ul li{
+  font-family: steronite;
+  display: inline-block;/*para que se pongan los elementos uno al lado del otro*/
+  margin: 0px auto;
+  text-align: center;
+  line-height: 100px;
+  font-size: 19px;
+}
+
+header a{
+  display: block;
+  height: inherit;
+  text-decoration: none;
+  color: #484545;
+  transition: all 300ms;/*para luego crear una animación con hover*/
+}
+
+/*Creamos una animación con hover*/
+
+header a:hover,
+.activated{ /*Creamos la clase activated para que cuando pulsemos un elemento de nuestra lista se quede marcado*/
+  background: rgba(79, 79, 79, 0.54);
+  color: white;
+  font-weight: lighter;
+  text-shadow: 1px 1px 4px #000000;
+}
+/* Quitamos el el efecto hover del logo - finalmente comentamos este código porque luego hago otro efecto hover diferente lara el logo*/
+/*
+header #logo a:hover{
+  background: transparent;
+  color: #484545;
+}
+*/
+
+/* Estilos del logotipo */
+
+#logo{
+  font-family: steronite;
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: none;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#logo div{
+  position: relative;
+  top: 16px;
+  height: 70px;
+  width: 75px;
+  border-radius: 250px;
+  background-color: #989898;
+  border: 2px solid #ffdf00;
+  box-shadow: 2px 2px 2px #817e7e;
+}
+
+#logo div p{ /*la posición de las letras del logo*/
+  position: relative;
+  top: -17px;
+}
+
+#logo a{ /* hago una serie de transformaciones que solo afectan al logo cuando hago hover*/
+  transition: color 500ms, transform 500ms;
+  color: #ffdf00;
+  font-weight: normal;
+  text-shadow: none;
+}
+
+#logo a:hover{
+  background: transparent;
+  transform: scale(1.1,1.1);/*aumenta el tamaño del logo*/
+  font-weight: normal;
+  color: #646464;
+}
+
+#logo div:hover{
+  background-color: #ffdf00;
+  border: 2px solid #646464;
+}
+
+/* Maquetando el contenedor principal*/
+
+/* pantallas inferiores a 600px*/
+
+@media only screen and (max-width: 420px) {
+  #headerDiv2{
+    width: 100%;
+  }
+
+  header ul li{
+    font-size: 14px;
+  }
+
+  header a{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  #content{
+    width: 100%;
+  }
+  /* Pie de página */
+
+  footer {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width:420px) and (max-width: 700px) {
+  #headerDiv2{
+    width: 100%;
+  }
+
+  header ul li{
+    font-size: 20px;
+  }
+
+
+  header a{
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  #content{
+    width: 100%;
+  }
+  /* Pie de página */
+
+  footer {
+    width: 100%;
+  }
+
+}
+/* pantallas superiores a 600px*/
+@media only screen and (min-width: 700px) {
+
+  #headerDiv2{
+    width: 80%;
+  }
+
+  header ul li{
+    font-size: 25px;
+  }
+
+
+  header a{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #content{
+    width: 80%;
+  }
+  /* Pie de página */
+
+  footer {
+  width: 80%;
+  }
+
+
+
+}
+
+#content{
+  height: auto;
+  margin: 0px auto;
+  box-shadow: 0px 0px 40px black;
+  background: rgba(255, 255, 255, 0.7);
+  padding-top: 120px;
+  padding-bottom: 30px;
+  border-left: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+  overflow: auto;
+}
+/* Pie de página */
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-family: steronite;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5)
+}
+
+
+/*Sobre mí*/
+
+#adLogo{
+  max-width: 80%;
+}
+/*
+#title {
+  width: 70%;
+  margin: 0px auto;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 20px;
+}
+*/
+
+
+#title h1 {
+  font-family: steronite;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  font-size: 27px;
+}
+#title h3 {
+  color: #b0acac;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+
+article.about {
+  width: 70%;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.about h2{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.about p{
+  color: gray;
+  text-align: justify;
+}
+
+.icon{
+  max-width: 40px;
+  height: auto;
+  padding-top: 20px;
+  padding-right: 10px;
+
+}
+
+/* Sección con formularios - create.component*/
+
+.container {
+  padding: 50px;
+}
+
+.container h2{
+  display: block;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+form{
+  width: 100%;
+}
+
+form label{
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+  width: 40%;
+  padding: 5px;
+}
+
+#comentarios {
+  width: 75%;
+  height: 200px;
+}
+
+form button,
+form input[type="submit"]{
+  display: block;
+  font-size: 17px;
+  padding: 5px;
+  margin-top: 10px;
+  color: #dad55e;
+  background-color: gray;
+  border: 1px solid #b0b0b0;
+  cursor: pointer;
+}
+
+form button:hover,
+form input[type="submit"]:hover{
+  color: gray;
+  background-color: #dad55e;
+  border: 1px solid  #b0b0b0;
+}
+
+form input[disabled]{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.formError {
+  font-size: 15px;
+  color: #f5f105;
+  text-shadow: 2px 2px 2px #817e7e;
+  background-color: #b0b0b0;
+  border: 2px solid #f5f105;
+  box-shadow: 2px 2px 2px #817e7e;
+  padding: 5px;
+  margin-left: 5px;
+}
+
+.message{
+  font-size: 15px;
+  border: 1px solid #f5f105;
+  box-shadow: 2px 2px 2px #817e7e;
+  padding: 5px;
+  width: 50%;
+}
+
+.success{
+  background-color: #25ac46;
+  color: white;
+}
+
+.success a{
+  color: white;
+}
+
+.failed{
+  background-color: #ff6060;
+  color: white;
+}
+
+
+
+/* Listado del portafolio*/
+
+@media only screen and (max-width: 420px) {
+  .project {
+    width: 100px;
+    height: 130px;
+  }
+
+  .project img{
+       max-height: 80px;
+       max-width: 80px;
+     }
+
+  .project a{
+    font-size: 17px;
+  }
+
+}
+
+@media only screen and (min-width:420px) and (max-width: 700px) {
+  .project {
+    width: 190px;
+    height: 200px;
+  }
+
+  .project img{
+    max-height: 130px;
+    max-width: 130px;
+  }
+  .project a{
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .project {
+    width: 220px;
+    height: 250px;
+  }
+  .project .image {
+    height: 190px;
+    width: 220px;
+  }
+  .project img{
+    max-height: 170px;
+    max-width: 170px;
+  }
+
+  .project a{
+    font-size: 17px;
+  }
+}
+
+.projectsContainer ul {
+  text-align: center;
+}
+
+.project {
+  list-style: none;
+  display: inline-block;
+  float: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: #b0b0b0 dotted 2px ;
+  background-color: #f1f1f1;
+}
+
+.projectsContainer ul :hover {
+  background-color: #faffd9;
+}
+
+.project .image {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+}
+
+.project img{
+  margin: auto;
+  align-content: center;
+}
+
+.project a{
+  text-decoration: none;
+  color: #777777;
+}
+
+/* Detalle de los proyectos */
+
+.detailContainer {
+  color: #777777;
+  padding-left: 5%;
+}
+
+#pImagenDetalle{
+  text-align: center;
+  padding-bottom: 5%;
+}
+#imagenDetalle{
+  max-width: 50%;;
+}
+
+.detailContainer h2{
+  font-size: 20px;
+  color: #a2a2a2;
+}
