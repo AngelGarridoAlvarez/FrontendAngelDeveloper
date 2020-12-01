@@ -27,4 +27,4 @@ const appRoutes: Routes = [
 //Exportamos la configuración de las rutas
 
 export const appRoutingProviders: any[] = []; //decimos que es un array de tipo any
-export const  routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes); //Carga nuestra configuración de rutas en el router de Angular
+export const  routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }); //Carga nuestra configuración de rutas en el router de Angular
