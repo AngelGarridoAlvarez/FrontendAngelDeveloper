@@ -440,7 +440,7 @@ form input[disabled]{
      }
 
   .project a{
-    font-size: 17px;
+    font-size: 11px;
   }
 
 }
@@ -488,9 +488,9 @@ form input[disabled]{
   display: inline-block;
   float: none;
   text-align: center;
-  margin-left: auto;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   overflow: hidden;
   border: #b0b0b0 dotted 2px ;
   background-color: #f1f1f1;
@@ -504,9 +504,11 @@ form input[disabled]{
   display:table-cell;
   vertical-align:middle;
   text-align:center;
+  padding-top: 5px;
 }
 
 .project img{
+  vertical-align: middle;
   margin: auto;
   align-content: center;
 }
@@ -528,7 +530,8 @@ form input[disabled]{
   padding-bottom: 5%;
 }
 #imagenDetalle{
-  max-width: 50%;;
+  width: 50%;
+  max-width: 400px;
 }
 
 .detailContainer h2{
