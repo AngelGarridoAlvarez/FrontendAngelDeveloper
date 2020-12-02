@@ -18,7 +18,7 @@ export class UploadService {
       let xhr = new XMLHttpRequest();
 
       //Recorre todos los archivos que me vayan llegando y adjúntalo en el formulario, con el nombre name, añade el archivo files[i] y recoge su nombre files[i].name
-      for (var i = 0; i < files.length; i++) {
+      for (let i = 0; i < files.length; i++) {
         formData.append(name, files[i], files[i].name);
       }
 
