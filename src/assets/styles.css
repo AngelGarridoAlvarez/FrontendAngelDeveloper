@@ -189,7 +189,8 @@ header #logo a:hover{
     width: 100%;
   }
 
-  article.about {
+  article.about,
+  .detailContainer{
     width: 80%;
     font-size: 14px;
   }
@@ -221,7 +222,8 @@ header #logo a:hover{
     width: 100%;
   }
 
-  article.about {
+  article.about,
+  .detailContainer{
     width: 80%;
     font-size: 18px;
   }
@@ -254,7 +256,8 @@ header #logo a:hover{
     width: 80%;
   }
 
-  article.about {
+  article.about,
+  .detailContainer{
     width: 80%;
     font-size: 21px;
   }
@@ -373,6 +376,7 @@ form input[type="number"],
 form input[type="email"],
 form textarea {
   width: 40%;
+  min-width: 205px;
   padding: 5px;
 }
 
