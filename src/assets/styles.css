@@ -17,6 +17,7 @@
   font-family: "titilium";
   src: url("fonts/titilium.ttf");
 }
+
 @font-face {
   font-family: "steronite";
   src: url("fonts/Steronite.ttf");
@@ -41,34 +42,33 @@ body {
   font-family: "titilium", Arial, Helvetica;
   font-size: 20px;
   background: url("img/pattern.png");
-  background-attachment: fixed;/*Para que el fondo se quede fijo*/
+  background-attachment: fixed; /*Para que el fondo se quede fijo*/
 }
 
-.clearfix{ /*Para limpiar lo flotado entre los diferentes elementos*/
+.clearfix { /*Para limpiar lo flotado entre los diferentes elementos*/
   float: none;
   clear: both;
 }
 
 /*Barra de navegación - header*/
 
-header{
+header {
   font-size: 10px;
   display: block;
   width: 100%;
   height: fit-content;
-  position: fixed;/*cuando hago scroll la barra de navegación se queda siempre arriba*/
-  text-transform: uppercase;/*para que todo el texto sea en mayúscula*/
-  background: url("img/pattern.png");
-;
+  position: fixed; /*cuando hago scroll la barra de navegación se queda siempre arriba*/
+  text-transform: uppercase; /*para que todo el texto sea en mayúscula*/
+  background: url("img/pattern.png");;
 }
 
-#headerDiv1{
+#headerDiv1 {
   width: 100%;
   height: 85px;
   overflow: hidden;
 }
 
-#headerDiv2{
+#headerDiv2 {
   height: 200px;
   background-color: rgba(74, 74, 74, 0.3);
   width: 80%;
@@ -78,7 +78,7 @@ header{
   box-shadow: 0px 0px 40px black;
 }
 
-header ul{
+header ul {
   display: block;
   width: 100%;
   height: inherit; /*heredado del padre*/
@@ -87,32 +87,33 @@ header ul{
   margin: -13px auto 0px;
 }
 
-header ul li{
+header ul li {
   font-family: steronite;
-  display: inline-block;/*para que se pongan los elementos uno al lado del otro*/
+  display: inline-block; /*para que se pongan los elementos uno al lado del otro*/
   margin: 0px auto;
   text-align: center;
   line-height: 100px;
   font-size: 19px;
 }
 
-header a{
+header a {
   display: block;
   height: inherit;
   text-decoration: none;
   color: #484545;
-  transition: all 300ms;/*para luego crear una animación con hover*/
+  transition: all 300ms; /*para luego crear una animación con hover*/
 }
 
 /*Creamos una animación con hover*/
 
 header a:hover,
-.activated{ /*Creamos la clase activated para que cuando pulsemos un elemento de nuestra lista se quede marcado*/
+.activated { /*Creamos la clase activated para que cuando pulsemos un elemento de nuestra lista se quede marcado*/
   background: rgba(79, 79, 79, 0.54);
   color: white;
   font-weight: lighter;
   text-shadow: 1px 1px 4px #000000;
 }
+
 /* Quitamos el el efecto hover del logo - finalmente comentamos este código porque luego hago otro efecto hover diferente lara el logo*/
 /*
 header #logo a:hover{
@@ -123,7 +124,7 @@ header #logo a:hover{
 
 /* Estilos del logotipo */
 
-#logo{
+#logo {
   font-family: steronite;
   font-size: 30px;
   font-weight: normal;
@@ -132,7 +133,7 @@ header #logo a:hover{
   padding-left: 15px;
 }
 
-#logo div{
+#logo div {
   position: relative;
   top: 16px;
   height: 70px;
@@ -143,26 +144,26 @@ header #logo a:hover{
   box-shadow: 2px 2px 2px #817e7e;
 }
 
-#logo div p{ /*la posición de las letras del logo*/
+#logo div p { /*la posición de las letras del logo*/
   position: relative;
   top: -17px;
 }
 
-#logo a{ /* hago una serie de transformaciones que solo afectan al logo cuando hago hover*/
+#logo a { /* hago una serie de transformaciones que solo afectan al logo cuando hago hover*/
   transition: color 500ms, transform 500ms;
   color: #ffdf00;
   font-weight: normal;
   text-shadow: none;
 }
 
-#logo a:hover{
+#logo a:hover {
   background: transparent;
-  transform: scale(1.1,1.1);/*aumenta el tamaño del logo*/
+  transform: scale(1.1, 1.1); /*aumenta el tamaño del logo*/
   font-weight: normal;
   color: #646464;
 }
 
-#logo div:hover{
+#logo div:hover {
   background-color: #ffdf00;
   border: 2px solid #646464;
 }
@@ -172,104 +173,103 @@ header #logo a:hover{
 /* pantallas inferiores a 600px*/
 
 @media only screen and (max-width: 420px) {
-  #headerDiv2{
+  #headerDiv2 {
     width: 100%;
   }
 
-  header ul li{
+  header ul li {
     font-size: 14px;
   }
 
-  header a{
+  header a {
     padding-right: 0px;
     padding-left: 0px;
   }
 
-  #content{
+  #content {
     width: 100%;
   }
 
   article.about,
-  .detailContainer{
+  .detailContainer {
     width: 80%;
     font-size: 14px;
   }
 
 
   /* Pie de página */
-
   footer {
     width: 100%;
   }
 }
 
-@media only screen and (min-width:420px) and (max-width: 700px) {
-  #headerDiv2{
+@media only screen and (min-width: 420px) and (max-width: 700px) {
+  #headerDiv2 {
     width: 100%;
   }
 
-  header ul li{
+  header ul li {
     font-size: 20px;
   }
 
 
-  header a{
+  header a {
     padding-right: 4px;
     padding-left: 4px;
   }
 
-  #content{
+  #content {
     width: 100%;
   }
 
   article.about,
-  .detailContainer{
+  .detailContainer {
     width: 80%;
     font-size: 18px;
   }
 
   /* Pie de página */
-
   footer {
     width: 100%;
   }
 
 }
+
 /* pantallas superiores a 600px*/
 @media only screen and (min-width: 700px) {
 
-  #headerDiv2{
+  #headerDiv2 {
     width: 80%;
   }
 
-  header ul li{
+  header ul li {
     font-size: 25px;
   }
 
 
-  header a{
+  header a {
     padding-right: 10px;
     padding-left: 10px;
   }
 
-  #content{
+  #content {
     width: 80%;
   }
 
   article.about,
-  .detailContainer{
+  .detailContainer {
     width: 80%;
     font-size: 21px;
   }
-  /* Pie de página */
 
+  /* Pie de página */
   footer {
-  width: 80%;
+    width: 80%;
   }
 
 }
 
-#content{
+#content {
   height: auto;
   margin: 0px auto;
   box-shadow: 0px 0px 40px black;
@@ -280,6 +280,7 @@ header #logo a:hover{
   border-right: 1px solid #b7b7b7;
   overflow: auto;
 }
+
 /* Pie de página */
 
 footer {
@@ -295,9 +296,10 @@ footer {
 
 /*Sobre mí*/
 
-#adLogo{
+#adLogo {
   max-width: 80%;
 }
+
 /*
 #title {
   width: 70%;
@@ -315,6 +317,7 @@ footer {
   padding-bottom: 5px;
   font-size: 27px;
 }
+
 #title h3 {
   color: #b0acac;
   margin-top: 5px;
@@ -328,18 +331,18 @@ article.about {
   margin-bottom: 20px;
 }
 
-.about h2{
+.about h2 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
 
-.about p{
+.about p {
   color: gray;
   text-align: justify;
 }
 
-.icon{
+.icon {
   max-width: 40px;
   height: auto;
   padding-top: 20px;
@@ -353,18 +356,18 @@ article.about {
   padding: 50px;
 }
 
-.container h2{
+.container h2 {
   display: block;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
 
-form{
+form {
   width: 100%;
 }
 
-form label{
+form label {
   display: block;
   width: 100%;
   margin-top: 10px;
@@ -386,7 +389,7 @@ form textarea {
 }
 
 form button,
-form input[type="submit"]{
+form input[type="submit"] {
   display: block;
   font-size: 17px;
   padding: 5px;
@@ -398,13 +401,13 @@ form input[type="submit"]{
 }
 
 form button:hover,
-form input[type="submit"]:hover{
+form input[type="submit"]:hover {
   color: gray;
   background-color: #dad55e;
-  border: 1px solid  #b0b0b0;
+  border: 1px solid #b0b0b0;
 }
 
-form input[disabled]{
+form input[disabled] {
   opacity: 0.4;
   cursor: not-allowed;
 }
@@ -420,7 +423,7 @@ form input[disabled]{
   margin-left: 5px;
 }
 
-.message{
+.message {
   font-size: 15px;
   border: 1px solid #f5f105;
   box-shadow: 2px 2px 2px #817e7e;
@@ -428,20 +431,19 @@ form input[disabled]{
   width: 50%;
 }
 
-.success{
+.success {
   background-color: #25ac46;
   color: white;
 }
 
-.success a{
+.success a {
   color: white;
 }
 
-.failed{
+.failed {
   background-color: #ff6060;
   color: white;
 }
-
 
 
 /* Listado del portafolio*/
@@ -452,34 +454,45 @@ form input[disabled]{
     height: 130px;
   }
 
-  .project img{
-       max-height: 80px;
-       max-width: 80px;
-     }
+  .project img {
+    max-height: 80px;
+    max-width: 80px;
+  }
 
-  .project a{
+  .project a {
     font-size: 11px;
   }
-  .detailContainer h2{
-    font-size: 16px;
+
+  .detailContainer h1 {
+    font-size: 17px
+  }
+
+  .detailContainer h2 {
+    font-size: 14px;
   }
 
 }
 
-@media only screen and (min-width:420px) and (max-width: 700px) {
+@media only screen and (min-width: 420px) and (max-width: 700px) {
   .project {
     width: 190px;
     height: 200px;
   }
 
-  .project img{
+  .project img {
     max-height: 130px;
     max-width: 130px;
   }
-  .project a{
+
+  .project a {
     font-size: 15px;
   }
-  .detailContainer h2{
+
+  .detailContainer h1 {
+    font-size: 19px
+  }
+
+  .detailContainer h2 {
     font-size: 18px;
   }
 }
@@ -489,24 +502,27 @@ form input[disabled]{
     width: 220px;
     height: 250px;
   }
+
   .project .image {
     height: 190px;
     width: 220px;
   }
-  .project img{
+
+  .project img {
     max-height: 170px;
     max-width: 170px;
   }
 
-  .project a{
+  .project a {
     font-size: 17px;
   }
-  .detailContainer h2{
+
+  .detailContainer h2 {
     font-size: 20px;
   }
 }
 
-.cargando{
+.cargando {
   font-size: 40px;
   text-align: center;
   background-color: #fffedc;
@@ -528,7 +544,7 @@ form input[disabled]{
   margin-right: 10px;
   margin-bottom: 10px;
   overflow: hidden;
-  border: #b0b0b0 dotted 2px ;
+  border: #b0b0b0 dotted 2px;
   background-color: #f1f1f1;
 }
 
@@ -537,19 +553,19 @@ form input[disabled]{
 }
 
 .project .image {
-  display:table-cell;
-  vertical-align:middle;
-  text-align:center;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
   padding-top: 5px;
 }
 
-.project img{
+.project img {
   vertical-align: middle;
   margin: auto;
   align-content: center;
 }
 
-.project a{
+.project a {
   text-decoration: none;
   color: #777777;
 }
@@ -558,19 +574,22 @@ form input[disabled]{
 
 .detailContainer {
   color: #777777;
-  padding: 10%;
+  padding-left: 8%;
+  padding-right: 8%;
   text-align: justify;
 }
 
-#pImagenDetalle{
+#pImagenDetalle {
   text-align: center;
   padding-bottom: 5%;
 }
-#imagenDetalle{
+
+#imagenDetalle {
   width: 50%;
   max-width: 400px;
 }
 
-.detailContainer h2{
+.detailContainer h2 {
   color: #a2a2a2;
 }
+
