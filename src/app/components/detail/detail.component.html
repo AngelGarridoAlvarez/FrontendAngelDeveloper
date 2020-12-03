@@ -1,3 +1,7 @@
+<div class="cargando" *ngIf="!project">
+  Cargando...
+</div>
+
 <div class="detailContainer" *ngIf="project">
   <h1>{{project.name}}</h1>
   <h2>{{project.category + " - " + project.year + " - " + project.languages}}</h2>

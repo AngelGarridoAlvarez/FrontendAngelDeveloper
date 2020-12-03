@@ -493,6 +493,15 @@ form input[disabled]{
   }
 }
 
+.cargando{
+  font-size: 40px;
+  text-align: center;
+  background-color: #fffedc;
+  border: #f5f105 solid 2px;
+  margin-top: 10%;
+  margin-bottom: 50%;
+}
+
 .projectsContainer ul {
   text-align: center;
 }

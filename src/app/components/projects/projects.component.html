@@ -1,4 +1,7 @@
 <div class="projectsContainer">
+  <div class="cargando" *ngIf="!projects">
+    Cargando...
+  </div>
 
     <ul>
       <li *ngFor="let project of projects" class="project">
