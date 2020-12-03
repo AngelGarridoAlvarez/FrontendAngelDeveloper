@@ -188,6 +188,13 @@ header #logo a:hover{
   #content{
     width: 100%;
   }
+
+  article.about {
+    width: 80%;
+    font-size: 14px;
+  }
+
+
   /* Pie de página */
 
   footer {
@@ -213,6 +220,12 @@ header #logo a:hover{
   #content{
     width: 100%;
   }
+
+  article.about {
+    width: 80%;
+    font-size: 18px;
+  }
+
   /* Pie de página */
 
   footer {
@@ -240,13 +253,16 @@ header #logo a:hover{
   #content{
     width: 80%;
   }
+
+  article.about {
+    width: 80%;
+    font-size: 21px;
+  }
   /* Pie de página */
 
   footer {
   width: 80%;
   }
-
-
 
 }
 
@@ -305,10 +321,8 @@ footer {
 
 
 article.about {
-  width: 70%;
   margin: 0px auto;
   margin-bottom: 20px;
-  font-size: 23px;
 }
 
 .about h2{
