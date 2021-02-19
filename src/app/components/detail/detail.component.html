@@ -6,6 +6,6 @@
   <h1>{{project.name}}</h1>
   <h2>{{project.category + " - " + project.year + " - " + project.languages}}</h2>
   <p><a href="{{project.link}}">Link</a></p>
-  <p id="pImagenDetalle"><img id="imagenDetalle" src="{{url+'get-image/' + project.image}}" *ngIf="project.image"/></p>
+  <p id="pImagenDetalle"><a href="{{project.link}}"><img id="imagenDetalle" src="{{url+'get-image/' + project.image}}" *ngIf="project.image"/></a></p>
   <p>{{project.description}}</p>
 </div>
